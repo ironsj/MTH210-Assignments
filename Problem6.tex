@@ -1,0 +1,48 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 6}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 6, Draft 2
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+The number $x=\sqrt[]{7}+\sqrt[]{14}$ is irrational.
+\end{proposition}
+\begin{proof}
+We will prove the given statement using proof by contradiction. That is, we will assume that $\sqrt[]{7}+\sqrt[]{14}$ is rational, and show that this assumption leads to a contradiction.
+
+\newpar
+By the definition of rational number,
+\begin{align}
+\sqrt[]{7}+\sqrt[]{14}&=\frac{p}{q}, \label{eq:1} \\
+\nonumber \end{align} 
+\noindent where $p$ and $q$ are integers and $q\neq0$.
+
+\newpar Squaring both sides of (\ref{eq:1}), we obtain $21+14\sqrt[]{2}=\frac{p^2}{q^2}$, which can be rewritten as 
+\begin{align*}
+\sqrt[]{2}=\frac{p^2}{14q^2}-\frac{21}{14}. \\
+\end{align*}
+
+\newpar
+This implies that $\sqrt[]{2}$ is equal to a rational number because 14, 21, and $\frac{p}{q}$ are rational numbers and the set of rational numbers is closed under subtraction and division.  However, by a previously proven proposition, we know $\sqrt[]{2}$ is irrational. Therefore, we have reached a contradiction.
+
+\newpar Having reached a contradiction, we conclude that the number $x=\sqrt[]{7}+\sqrt[]{14}$ is irrational, which completes the proof.
+\end{proof}
+
+
+
+\end{document}
+
+
+

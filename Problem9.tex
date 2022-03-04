@@ -1,0 +1,64 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 9}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 9, Draft 2
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Suppose $A$ and $B$, and $C$ are subsets in some universal set, $U$. If $A\cap B=A\cap C$ and $A^c\cap B=A^c\cap C$, the $B=C$.
+\end{proposition}
+\begin{proof}
+\newpar 
+We will assume $A\cap B=A\cap C$ and $A^c\cap B=A^c\cap C$ and prove $B=C$.
+
+\newpar
+Choose an arbitrary element $x$ belonging to $B$. When $x\in B$, $x$ will belong to $A$ or $x$ will not belong to $A$. By the definition of complement when $x\not\in A$, $x\in A^c$. Thus, we are left with two cases:
+
+\textbf{Case 1:} $x\in A$, and
+
+\textbf{Case 2:} $x\in A^c$.
+
+\newpar 
+\textbf{Case 1:} When $x\in A$ and $x\in B$, $x\in A\cap B$ by the definition of intersection. Since $A\cap B=A\cap C$, $x\in A\cap C$. Thus, $x\in C$ by the definition of intersection. We have shown that if $x$ is an arbitrary element of $B$, then $x\in C$. Thus, $B\subseteq C$ by the definition of subset.
+
+\newpar 
+\textbf{Case 2:} When $x\in A^c$ and $x\in B$, $x\in A^c\cap B$ by the definition of intersection. Because $A^c\cap B=A^c\cap C$, $x\in A^c\cap C$. Thus, $x\in C$ by the definition of intersection. We have shown that if $x$ is an arbitrary element of $B$, then $x\in C$. Thus, $B\subseteq C$ by the definition of subset.
+
+\newpar By considering all possible cases, we have proven that if $x$ is an arbitrary element of $B$, then $x$ belongs to $C$. Therefore, $B\subseteq C$.
+
+\newpar
+Choose an arbitrary element $x$ belonging to $C$. When $x\in C$, $x$ will belong to $A$ or $x$ will not belong to $A$. By the definition of complement, when $x\not\in A$, $x\in A^c$. Thus, we are left with two cases:
+
+\textbf{Case 1:} $x\in A$, and
+
+\textbf{Case 2:} $x\in A^c$.
+
+\newpar 
+\textbf{Case 1:} When $x\in A$ and $x\in C$, $x\in A\cap C$ by the definition of intersection. Because $A\cap B=A\cap C$, $x\in A\cap B$. Thus, $x\in B$ by the definition of intersection. We have shown that if $x$ is an arbitrary element of $C$, then $x\in B$. Thus, $C\subseteq B$ by the definition of subset.
+
+\newpar 
+\textbf{Case 2:} When $x\in A^c$ and $x\in C$, $x\in A^c\cap C$ by the definition of intersection. Because $A^c\cap B=A^c\cap C$, $x\in A^c\cap B$. Thus, $x\in B$ by the definition of intersection. We have shown that if $x$ is an arbitrary element of $C$, then $x\in B$. Thus, $C\subseteq B$ by the definition of subset.
+
+\newpar By considering all possible cases, we have proven that if $x$ is an arbitrary element of $C$, then $x$ belongs to $B$. Therefore, $C\subseteq B$.
+
+\newpar 
+We have proven that $B\subseteq C$ and $C\subseteq B$ for all possible cases. Thus, by the definition of subset $B=C$.
+
+
+\end{proof}
+
+
+
+\end{document}

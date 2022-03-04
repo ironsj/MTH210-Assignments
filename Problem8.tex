@@ -1,0 +1,58 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 8}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 8, Draft 2
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Suppose $a$ is an integer. For every natural number, $n\geq2$, if $a^n$ is even, then $a$ is even.
+\end{proposition}
+\begin{proof}
+We will prove the logically equivalent contrapositive, when $a$ is odd, $a^n$ is odd, using mathematical induction. Let $P(n)$ be the predicate if $a$ is odd, then $a^n$ is odd.
+
+\newpar
+Since $a$ is odd, $a=2m+1$ for some integer $m$. When $n=2$, $a^n=a^2$. Therefore,
+\begin{align*}
+a^2&=(2m+1)^2 \\
+&=4m^2+4m+1 \\
+&=2(2m^2+2m)+1. \\
+\end{align*}
+We will label $k=2m^2+2m$. Because 2 and $m$ are integers and the set of integers is closed under multiplication and addition, $k$ is an integer. Since $a^2=2k+1$ and $k$ is an integer, $a^2$ is odd. Thus, $P(2)$ is true.
+
+\newpar
+We now assume that $P(k)$ is true and show that $P(k+1)$ is true. That is, we assume our induction hypothesis when $a$ is odd, $a^k$ is odd, and show that when $a$ is odd, $a^{k+1}$ is odd.
+
+\newpar By our induction hypothesis and the definition of odd, $a^k=2p+1$ and $a=2q+1$ for some integer $p$ and some integer $q$.
+
+\newpar Because $a$ is odd, we know $a^k$ odd, and we can substitute $a$ and $a^k$ into the expression $a^k+1$ as follows:
+\begin{align*}
+a^{k+1}&=a^k\cdot a^1 \\
+&=(2p+1)(2q+1) \\
+&=4pq+2p+2q+1 \\
+&=2(2pq+p+q)+1. \\
+\end{align*}
+
+\newpar
+We will label $d=2pq+p+q$. Because $p$ and $q$ are integers and the set of integers is closed under multiplication, $d$ is an integer. Therefore, since $a^{k+1}=2d+1$, $a^{k+1}$ is odd by the definition of odd.
+
+\newpar We have proven that if the predicate $P(k)$ is true, then so is $P(k+1)$. By the principal of mathematical induction, the predicate is true for every $n\in{\mathbb{N}}$, and the proof is complete.
+\end{proof}
+
+
+
+\end{document}
+
+
+

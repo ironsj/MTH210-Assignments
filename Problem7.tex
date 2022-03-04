@@ -1,0 +1,86 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 7}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 7, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+\newpar
+\begin{proposition}
+If 5 does not divide the integer $a$, then $a^2\equiv \mbox{1(mod 5)}$ or $a^2\equiv \mbox{1(mod 3)}$.
+\end{proposition}
+\begin{proof}
+We will assume 5 does not divide the integer $a$ and show that $a^2\equiv \mbox{1(mod 5)}$ or $a^2\equiv \mbox{-1(mod 5)}$.
+
+\newpar By the Division Algorithm and the fact 5 does not divide $a$, there are four possible cases to consider based upon integer remainders:
+
+\textbf{Case 1:} $a=5n+1$ where n is an integer, 
+
+\textbf{Case 2:} $a=5n+2$ where n is an integer,
+
+\textbf{Case 3:} $a=5n+3$ where n is an integer, and
+
+\textbf{Case 4:} $a=5n+4$ where n is an integer.
+
+\newpar
+\textbf{Case 1:} When $a=5n+1$, we can substitute $a$ into the expression $a^2$ as follows:
+\begin{align*}
+a^2&=(5n+1)^2 \\
+&= 25n^2+10n+1 \\
+&= 5(5n^2+2n)+1. \\
+\end{align*}
+\noindent
+We will label $k=5n^2+2n$. Because 5, 2, and $n$ are integers and the set of integers is closed under addition and multiplication, $k$ is an integer. Since $a^2=5k+1$ and $k$ is an integer, $a^2\equiv \mbox{1(mod 5)}$ by the definitions of divides and congruence. 
+
+
+\newpar
+\textbf{Case 2:} When $a=5n+2$, we can substitute $a$ into the expression $a^2$ as follows:
+\begin{align*}
+a^2&=(5n+2)^2 \\
+&= 25n^2+20n+5-1 \\
+&= 5(5n^2+4n+1)-1. \\
+\end{align*}
+\noindent
+We will label $k=5n^2+4n+1$. Because 5, 4, 1, and $n$ are integers and the set of integers is closed under addition and multiplication, $k$ is an integer. Since $a^2=5k-1$ and $k$ is an integer, $a^2\equiv \mbox{-1(mod 5)}$ by the definitions of divides and congruence. 
+
+
+\newpar
+\textbf{Case 3:} When $a=5n+3$, we can substitute $a$ into the expression $a^2$ as follows:
+\begin{align*}
+a^2&=(5n+3)^2 \\
+&= 25n^2+30n+10-1 \\
+&= 5(5n^2+6n+2)-1. \\
+\end{align*}
+\noindent
+We will label $k=5n^2+6n+2$. Because 5, 6, 2, and $n$ are integers and the set of integers is closed under addition and multiplication, $k$ is an integer. Since $a^2=5k-1$ and $k$ is an integer, $a^2\equiv \mbox{-1(mod 5)}$ by the definitions of divides and congruence. 
+
+
+\newpar
+\textbf{Case 4:} When $a=5n+4$, we can substitute $a$ into the expression $a^2$ as follows:
+\begin{align*}
+a^2&=(5n+4)^2 \\
+&= 25n^2+40n+16 \\
+&= 5(5n^2+8n+3)+1. \\
+\end{align*}
+\noindent
+We will label $k=5n^2+8n+3$. Because 5, 8, 3, and $n$ are integers and the set of integers is closed under addition and multiplication, $k$ is an integer. Since $a^2=5k+1$ and $k$ is an integer, $a^2\equiv \mbox{1(mod 5)}$ by the definitions of divides and congruence. 
+
+\newpar
+We have proven that the conclusion of the logically equivalent statement is true for all possible cases. Thus, when 5 does not divide the integer $a$, then $a^2\equiv \mbox{1(mod 5)}$ or $a^2\equiv \mbox{-1(mod 5)}$.
+\end{proof}
+
+
+
+\end{document}
+
+
+

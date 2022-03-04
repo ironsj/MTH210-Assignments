@@ -1,0 +1,46 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 2}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 2, Draft 2
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Suppose $abcd$ is a four-digit number. If 11 divides $abc-d$, where $abc$ is the three digit number formed using $a$, $b$, and $c$, then 11 divides $abcd$.
+\end{proposition}
+\begin{proof}
+We will assume that 11 divides $abc-d$, where $abc$ is the three digit number formed using $a$, $b$, $c$, and prove that 11 also divides $abcd$.
+
+\newpar
+By the definition of divides, $abc-d=11n$ for some integer $n$, which can also be expressed as $abc=11n+d$. Thus, 
+\begin{align*}
+abcd&=abc(10)+d \\
+&= (11n+d)10+d \\
+&= 110n+11d \\
+&= 11(11n+d). \\
+\end{align*}
+\noindent
+We will label $k=11n+d$. Because 11, $n$ and $d$ are integers and the set of integers is closed under the operation of multiplication and addition, we know that $k$ is also an integer. Therefore, since
+$abcd=11k$ and $k$ is an integer, we can conclude 11 divides $abcd$ by the definition of divides.
+
+\newpar
+We have proven that if 11 divides $abc-d$, where $abc$ is the three digit number formed using $a$, $b$, and $c$, then 11 also divides $abcd$.
+\end{proof}
+
+
+
+\end{document}
+
+
+

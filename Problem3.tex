@@ -1,0 +1,42 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 3}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 3, Final Copy
+
+\noindent ironsj@mail.gvsu.edu
+\newpar
+\begin{proposition}
+Suppose $a$ and $b$ are positive real numbers. Then $(a+b)(\frac{1}{a}+\frac{4}{b}) \ge9$.
+\end{proposition}
+\begin{proof}
+Since $a$ and $b$ are real numbers and the square of any real number is nonnegative, $(2a-b)^2\ge0$. Thus,
+\begin{align*}
+0&\le(2a-b)^2 \\
+0&\le4a^2+b^2-4ab \\
+4ab&\le4a^2+b^2 \\
+4&\le\frac{4a^2+b^2}{ab} \mbox{(Since $a$ and $b$ are positive, dividing by $ab$ keeps the inequality the same direction.)} \\
+4&\le\frac{4a}{b}+\frac{b}{a} \\
+9&\le\frac{4a}{b}+\frac{b}{a}+5 \\
+9&\le(a+b)(\frac{1}{a}+\frac{4}{b}).
+\end{align*}
+
+\noindent
+We have proven that if $a$ and $b$ are positive real numbers, then $(a+b)(\frac{1}{a}+\frac{4}{b})\ge9$.
+\end{proof}
+
+
+
+\end{document}
+
+
+

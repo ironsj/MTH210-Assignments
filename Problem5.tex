@@ -1,0 +1,52 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 5}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 5, Draft 2
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+Suppose $a$ and $b$ are integers. If $a$ is even and $b$ is odd, then 4 does not divide $a^3+b^3$.
+\end{proposition}
+\begin{proof}
+We will use a logically equivalent statement to prove this statement true. That is, we will assume 4 divides $a^3+b^3$ and $a$ is even, and we will prove that $b$ is even.
+
+\newpar
+Since 4 divides $a^3+b^3$, there exists an integer, $m$, such that:
+\begin{align}
+4m=a^3+b^3. \label{eq:1} \\
+\nonumber \end{align}
+\noindent Also, since $a$ is even, there exists an integer, $n$, such that:
+\begin{align}
+a=2n. \label{eq:2}
+\end{align}
+
+\newpar
+Rearranging equation (\ref{eq:1}), substituting in equation (\ref{eq:2}), and using algebra, we obtain the following:
+\begin{align*}
+b^3&=4m-a^3 \\
+&=4m-(2n)^3 \\
+&=4m-8n^3 \\
+&=2(2m-4n^3). \\
+\end{align*}
+
+\newpar We will label $k=2m-4n^3$. Because 2, 4, $m$, and $n$ are integers and the set of integers is closed under subtraction and multiplication, we know that $k$ is also an integer. Since $b^3=2k$ and $k$ is an integer, we know $b^3$ is even by the definition of even. Thus, because $b^3$ is even, we know $b$ is even by the third problem of the Indirect Proofs assignment.
+\end{proof}
+
+
+
+\end{document}
+
+
+

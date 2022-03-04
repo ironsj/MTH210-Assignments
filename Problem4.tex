@@ -1,0 +1,47 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 4}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 4, Final Copy
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+For any integer $k$, $k^2+6k+9$ is even if and only if 4 divides $k^2-2k+25$.
+\end{proposition}
+\begin{proof}
+We will first assume 4 divides $k^2-2k+25$ and show $k^2+6k+9$ is even. By the definition of divides, $k^2-2k+25=4a$ for some integer $a$, which can also be expressed as $k^2+6k+9=4a+8k-16$. Thus,
+\begin{align*}
+k^2+6k+9&=4a+8k-16 \\
+&=2(2a+4k-8). \\
+\end{align*}
+\noindent We will label $s=2a+4k-8$. Because 2, 4, 8, $a$, and $k$ are integers closed under multiplication, addition, and subtraction, we know $s$ is also an integer. Therefore, since $k^2+6k+9=2s$ and $s$ is an integer, we can conclude $k^2+6k+9$ is even by the definition of even. We have, therefore, proven the first part of the biconditional statement.
+
+\newpar
+\noindent We will now assume $k^2+6k+9$ is even and show that 4 divides $k^2-2k+25$. Since $(k+3)^2$ is even, 4 divides $(k+3)^2$ as this is a fact about squares of integers. By the definition of divides, there is some integer $t$ such that $(k+3)^2=4t$, which can also be expressed as $k^2-2k+25=4t-8k+16$. Thus,
+\begin{align*}
+k^2-2k+25&=4t-8k+16 \\
+&=4(t-2k+4).
+\end{align*}
+\noindent We will label $b=t-2k+4$. Because $t$, $k$, 2, and 4 are integers closed under multiplication, addition, and subtraction, we know $b$ is also an integer. Therefore, since $k^2-2k+25=4b$ and $b$ is an integer, we can conclude 4 divides $k^2-2k+25$ by the definition of divides. Therefore, we have proven that if $k^2+6k+9$ is even, then 4 divides $k^2-2k+25$.
+
+
+
+\newpar
+Since we have proven both statements that comprise the original biconditional statement, the proof is complete.
+\end{proof}
+
+
+
+\end{document}
+

@@ -1,0 +1,46 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 1}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 1, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+If $m$ is an odd integer, then 4 divides $m^3-m^2+m-5$.
+\end{proposition}
+\begin{proof}
+We will assume that $m$ is an odd integer and prove that 4 divides $m^3-m^2+m-5$.
+
+\newpar
+By the definition of odd integer, there exists an integer $n$ having the property that $m=2n+1$. Thus,
+\begin{align*}
+m^3-m^2+m-5&=(2n+1)^3-(2n+1)^2+(2n+1)-5 \\
+&=8n^3+8n^2+4n-4 \\
+&= 4(2n^3+2n^2+n-1). \\
+\end{align*}
+
+\noindent
+We will label $k=2n^3+2n^2+n-1$. Because 1,2, and $n$ are integers and the set of integers is closed under the operations of multiplication and addition, we know that $k$ is also an integer. Therefore, since
+$m^3-m^2+m-5=4k$ and $k$ is an integer, we can conclude 4 divides $m^3-m^2+m-5$ by the definition of divides. 
+
+\newpar
+We have proven that if $m$ is an odd integer, then 4 divides $m^3-m^2+m-5$.
+\end{proof}
+
+
+
+\end{document}
+
+
+

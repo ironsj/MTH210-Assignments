@@ -1,0 +1,104 @@
+\documentclass[11 pt]{article}
+\title{Proof Portfolio 10}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\newpar}{\vspace{.15in}\noindent}
+
+\begin{document}
+
+\noindent Jake Irons, Proof 10, Draft 1
+
+\noindent ironsj@mail.gvsu.edu
+
+\newpar
+\begin{proposition}
+The function $f:\mathbb{N} \to \mathbb{Z}$ defined by
+
+$$ f(n) =  
+\begin{cases}      
+
+\frac{n-1}{2} & \textrm{ if $n$ is an odd natural number;} \\   
+
+-\frac{n}{2} & \textrm{ if $n$ is an even natural number.} \\   
+
+\end{cases} $$ 
+Then $f$ is a bijection.
+\end{proposition}
+\begin{proof}
+\newpar 
+We will prove $f$ is a bijection by first establishing it is an injection and then showing it is a surjection. Let $n_1$ and $n_2$ denote arbitrary elements of the domain $\mathbb{N}$. There are for possible cases based upon whether or not $n_1$ and $n_2$ are even or odd natural numbers:
+
+\textbf{Case 1:} $n_1$ is an odd natural number and $n_2$ is an odd natural number,
+
+\textbf{Case 2:} $n_1$ is an even natural number and $n_2$ is an even natural number,
+
+\textbf{Case 3:} $n_1$ is an even natural number and $n_2$ is an odd natural number,
+
+\textbf{Case 4:} $n_1$ is an odd natural number and $n_2$ is an even natural number.
+
+\newpar
+In case 1, since $n_1$ and $n_2$ are both odd, $f(n_1)=\frac{n_1-1}{2}$ and $f(n_2)=\frac{n_2-1}{2}$ by the definition of $f$. Therefore,
+\begin{align}
+\frac{n_1-1}{2}=\frac{n_2-1}{2}. \label{eq:1} \\
+\nonumber \end{align}
+
+\newpar 
+By cross multiplying and simplifying (\ref{eq:1}), we get $n_1=n_2$.
+
+\newpar
+In case 2, since $n_1$ and $n_2$ are both even, $f(n_1)=-\frac{n_1}{2}$ and $f(n_2)=-\frac{n_2}{2}$ by the definition of $f$. Therefore,
+\begin{align}
+-\frac{n_1}{2}=-\frac{n_2}{2}. \label{eq:2} \\
+\nonumber \end{align}
+
+\newpar By cross multiplying and simplifying (\ref{eq:2}), we get $n_1=n_2$.
+
+\newpar
+In case 3, $n_1$ is even and $n_2$ is odd, which implies $n_1\not=n_2$. By the definition of $f$, $f(n_1)\le -1$ and $f(n_2)\ge 0$. Thus, $f(n_1)\not=f(n_2)$.
+
+\newpar
+In case 4, $n_1$ is odd and $n_2$ is even, which implies $n_1\not=n_2$. By the definition of $f$, $f(n_1)\ge 0$ and $f(n_2)\le -1$. Thus, $f(n_1)\not=f(n_2)$.
+
+
+\newpar 
+In each of the four cases we have shown, directly or indirectly, that if $n_1\not=n_2$, then $f(n_1)\not=f(n_2)$.
+
+\newpar 
+We now prove $f$ is a surjection. Let $y$ denote an arbitrary element of the codomain $\mathbb{Z}$. We will proceed with cases based on the sign of $y$:
+
+\textbf{Case 1:} $y<0$,
+
+\textbf{Case 2:} $y>0$.
+
+\newpar 
+In case 1, define $n=-2y$. Since $y<0$, $n$ is an even natural number and thus in the domain $\mathbb{N}$ of $f$. Also, $n$ is even, so that by the definition of $f$,
+\begin{align*}
+f(n)&=-\frac{(-2y)}{2} \\
+&=y. \\
+\end{align*}
+
+\newpar 
+Thus, $f(n)=y$.
+
+\newpar 
+In case 2, define $n=2y+1$. Since $y>0$, $n$ is an odd natural number and thus in the domain $\mathbb{N}$ of $f$. Also, $n$ is odd, so that by the definition of $f$,
+\begin{align*}
+f(n)&=\frac{(2y+1)-1}{2} \\
+&=\frac{2y}{2} \\
+&=y. \\
+\end{align*}
+
+\newpar 
+Thus $f(n)=y$. In each of the two cases we have shown that for an arbitrary element $y$ belonging to the codomain $\mathbb{Z}$ of $f$, there exists $n$ belonging to the domain $\mathbb{N}$ of $f$ such that $f(n)=y$. Thus $f$ is a surjection by the definition of surjection.
+
+\newpar Since $f$ is both an injection and a surjection, it is a bijection by the definition of bijection, which completes the proof.
+\end{proof}
+
+
+
+\end{document}
